@@ -295,6 +295,72 @@ ALTER TABLE USEDVEH
 				REFERENCES INVENTORY([Inventory code]);
 
 
+ALTER TABLE CUST
+	ADD 
+	CONSTRAINT UQ_customernumber
+		UNIQUE([customer number]);
+
+ALTER TABLE CUST
+	ADD 
+	CONSTRAINT UQ_driverslicense
+		UNIQUE([drivers license]);
+
+
+ALTER TABLE DEALER
+	ADD 
+	CONSTRAINT UQ_dealernumber
+		UNIQUE([dealer number]);
+		
+ALTER TABLE DEALER
+	ADD 
+	CONSTRAINT UQ_dealername
+		UNIQUE([dealer name]);
+
+ALTER TABLE VEHICLE
+	ADD 
+	CONSTRAINT UQ_vehiclecode
+		UNIQUE([vehicle code]);
+
+ALTER TABLE INVENTORY
+	ADD 
+	CONSTRAINT UQ_Inventorycode
+		UNIQUE([Inventory code]);
+
+ALTER TABLE NEWVEH
+	ADD 
+	CONSTRAINT UQ_New_inventorycode
+		UNIQUE([inventory code]);
+
+ALTER TABLE USEDVEH
+	ADD 
+	CONSTRAINT UQ_inventorycode
+		UNIQUE([inventory code]);
+
+ALTER TABLE TESTDRIVE
+	ADD 
+	CONSTRAINT UQ_Testdrivecode
+		UNIQUE([Test drive code]);
+
+ALTER TABLE AVAILOPTIONS
+	ADD 
+	CONSTRAINT UQ_Optioncode
+		UNIQUE([Option code]);
+
+ALTER TABLE SERVREC
+	ADD 
+	CONSTRAINT UQ_Servicerecordnumber
+		UNIQUE([Service record number]);
+
+ALTER TABLE ROUTSERV
+	ADD 
+	CONSTRAINT UQ_Servicerecordnumber1
+		UNIQUE([service record number]);
+
+ALTER TABLE REPSERV
+	ADD 
+	CONSTRAINT UQ_Servicerecordnumber2
+		UNIQUE([service record number]);
+
 
 
 				
